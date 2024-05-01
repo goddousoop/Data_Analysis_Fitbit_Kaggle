@@ -154,7 +154,7 @@ head(merged_data)
 ggplot(data=activity, aes(x=TotalSteps, y=Calories)) + 
   geom_point() + geom_smooth() + labs(title="Total Steps vs. Calories")
 ```
-![here](https://drive.google.com/file/d/1ZY-gGLldXzF7BdQcsURgZAEmZzF9LeNc/view?usp=sharing)
+![totalsteps vs calories](https://github.com/goddousoop/Data_Analysis_Fitbit_Kaggle/assets/106828339/43493be5-0ce8-4898-bbce-3744d31cdca3)
 I see positive correlation here between Total Steps and Calories, which is obvious - the more active we are, the more calories we burn.
 
 ```{r}
