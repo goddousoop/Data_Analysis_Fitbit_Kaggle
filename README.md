@@ -155,12 +155,17 @@ ggplot(data=activity, aes(x=TotalSteps, y=Calories)) +
   geom_point() + geom_smooth() + labs(title="Total Steps vs. Calories")
 ```
 ![totalsteps vs calories](https://github.com/goddousoop/Data_Analysis_Fitbit_Kaggle/assets/106828339/43493be5-0ce8-4898-bbce-3744d31cdca3)
+
+
 I see positive correlation here between Total Steps and Calories, which is obvious - the more active we are, the more calories we burn.
 
 ```{r}
 ggplot(data=sleep, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + 
   geom_point()+ labs(title="Total Minutes Asleep vs. Total Time in Bed")
 ```
+
+![minutes vs bed](https://github.com/goddousoop/Data_Analysis_Fitbit_Kaggle/assets/106828339/c7dfdc72-a561-4ac3-b158-7efd0cbaf75a)
+
 
 The relationship between Total Minutes Asleep and Total Time in Bed looks linear. So if the Bellabeat users want to improve their sleep, we should consider using notification to go to sleep.
 
@@ -177,6 +182,9 @@ ggplot(data=int_new, aes(x=time, y=mean_total_int)) + geom_histogram(stat = "ide
   labs(title="Average Total Intensity vs. Time")
 ```
 
+![time vs intensity](https://github.com/goddousoop/Data_Analysis_Fitbit_Kaggle/assets/106828339/2f16b4d7-ae08-4985-b647-e5729ab69765)
+
+
 - After visualizing Total Intensity hourly, I found out that people are more active between 5 am and 10pm.
 
 - Most activity happens between 5 pm and 7 pm - I suppose, that people go to a gym or for a walk after finishing work. We can use this time in the Bellabeat app to remind and motivate users to go for a run or walk.
@@ -190,6 +198,9 @@ ggplot(data=merged_data, aes(x=TotalMinutesAsleep, y=SedentaryMinutes)) +
 geom_point(color='darkblue') + geom_smooth() +
   labs(title="Minutes Asleep vs. Sedentary Minutes")
 ```
+
+![minutes vs sedentry](https://github.com/goddousoop/Data_Analysis_Fitbit_Kaggle/assets/106828339/6c329b87-f0e1-4509-a4b9-5d4d65b524bc)
+
 
 - Here we can clearly see the negative relationship between Sedentary Minutes and Sleep time.
 
@@ -206,6 +217,9 @@ recordsVsSleep <- sleep %>%
 ggplot(data = recordsVsSleep, aes(y=Average_hour_sleep,x=TotalSleepRecords, color = "blue")) + geom_bar(position='dodge', stat='identity')+
   labs(title="TotalTimeInBed vs. TotalSleepRecords")
 ```
+
+![AvgHour vs AvgHeart](https://github.com/goddousoop/Data_Analysis_Fitbit_Kaggle/assets/106828339/0d52157f-3959-4bf7-997f-5815c82022f4)
+
 
 - People who sleeps 3 times a day have total sleep hour of 10+ which can correlate to increase in sedentary time
 
@@ -226,4 +240,7 @@ I had done more analysis on heart data but my R markdown keep crashing because i
 - As an idea: if users want to improve their sleep, the Bellabeat app can recommend reducing sedentary time.
 
 - As heart is high for those who sleeps less than 5 hours. so a pop-up notification to sleep to promote good heart health
+
+
+
 
